@@ -1,0 +1,20 @@
+{
+	"db-connections": {
+		"mongdodb": {
+			"host": "cluster0.g2jcjf7.mongodb.net",
+			"user": "acad_rest_api_user",
+			"password": "mKuWdj7JCeeO9z5j",
+			"dbname": "AcademicDB"
+		}
+	},
+
+	"secretKeys": {
+		"cryptojs": "3gHVGY@jnb&^{3[5"
+	},
+	"roles": {
+		"student": 1,
+		"teacher": 2
+	},
+
+	"server-port": 3000
+}
