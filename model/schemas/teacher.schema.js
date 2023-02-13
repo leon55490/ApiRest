@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 const validator = require('mongoose-unique-validator');
 
-const teacherSchema = new Schema({
+const teacherSchema = new mongoose.Schema({
 	document: {
 		type: 'Number',
 		required: true,

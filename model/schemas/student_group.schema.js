@@ -1,7 +1,7 @@
 /** packages */
 const mongoose = require('mongoose');
 
-const studentGroupSchema = new Schema({
+const studentGroupSchema = new mongoose.Schema({
 	student_id: {
 		type: mongoose.Schema.Types.ObjectId,
 		ref: 'coll_student',

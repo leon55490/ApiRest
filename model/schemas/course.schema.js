@@ -1,7 +1,7 @@
 /** packages */
 const mongoose = require('mongoose');
 
-const courseSchema = new Schema({
+const courseSchema = new mongoose.Schema({
 	code: {
 		type: 'Number',
 		required: true,

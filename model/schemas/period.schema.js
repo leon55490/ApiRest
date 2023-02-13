@@ -1,7 +1,7 @@
 /** packages */
 const mongoose = require('mongoose');
 
-const periodSchema = new Schema({
+const periodSchema = new mongoose.Schema({
 	year: {
 		type: 'Number',
 		required: true,
