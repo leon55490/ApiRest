@@ -2,22 +2,22 @@
 const mongoose = require('mongoose');
 const config = require('config');
 
-const mongodbInfo = config.get('db-connections.mongdodb');
+const mongodbInfo = config.get('db-connections.mongodb');
 
-const connStr = `mongodb+srv://${mongodbInfo.user}:${mongodbInfo.password}@${mongodbInfo.host}/${mongodbInfo.dbname}?retryWrites=true&w=majority`;
+const connStr = `mongodb+srv://${mongodbInfo.user}:${mongodbInfo.password}@${mongodbInfo.host}/${mongodbInfo.dbname}`;
 
 module.exports = () => {
 	mongoose.connect(connStr);
 
-	mongoose.connect.on('connected', () => {
+	mongoose.connection.on('connected', () => {
 		console.log('mongodb server connected!');
 	});
 
-	mongoose.connect.on('disconnected', () => {
+	mongoose.connection.on('disconnected', () => {
 		console.log('mongodb server disconnected!');
 	});
 
-	mongoose.connect.on('error', () => {
+	mongoose.connection.on('error', () => {
 		console.log('mongodb server connection error!');
 	});
 
