@@ -1,6 +1,6 @@
 {
 	"db-connections": {
-		"mongdodb": {
+		"mongodb": {
 			"host": "cluster0.g2jcjf7.mongodb.net",
 			"user": "acad_rest_api_user",
 			"password": "mKuWdj7JCeeO9z5j",

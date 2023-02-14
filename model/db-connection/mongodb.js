@@ -4,10 +4,7 @@ const config = require('config');
 
 const mongodbInfo = config.get('db-connections.mongdodb');
 
-// user: acad_rest_api_user
-// password: mKuWdj7JCeeO9z5j
-const connStr =
-	'mongodb+srv://${mongodbInfo.user}:${mongodbInfo.password}@${mongodbInfo.host}/${mongodbInfo.dbname}?retryWrites=true&w=majority';
+const connStr = `mongodb+srv://${mongodbInfo.user}:${mongodbInfo.password}@${mongodbInfo.host}/${mongodbInfo.dbname}?retryWrites=true&w=majority`;
 
 module.exports = () => {
 	mongoose.connect(connStr);
