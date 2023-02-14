@@ -9,15 +9,15 @@ const teacherSchema = new mongoose.Schema({
 		unique: true,
 	},
 	name: {
-		type: 'Number',
+		type: 'String',
 		required: true,
 	},
 	lastname: {
-		type: 'Number',
+		type: 'String',
 		required: true,
 	},
 	email: {
-		type: 'Number',
+		type: 'String',
 		required: true,
 		unique: true,
 	},
