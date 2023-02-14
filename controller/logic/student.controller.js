@@ -84,7 +84,7 @@ exports.getByCode = (req, res, next) => {
 	});
 };
 
-exports.deleteStuden = () => {
+exports.deleteStudent = () => {
 	studentDto.delete({ _id: req.body.id }, (err, data) => {
 		if (err) {
 			return res.status(400).json({
