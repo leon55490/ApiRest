@@ -1,11 +1,11 @@
 /** Dto */
-const dto = require('../../model/dto/student.dto');
+const studentDto = require('../../model/dto/student.dto');
 const userDto = require('../../model/dto/user.dto');
 const config = require('config');
 
 /** Helper */
 const helper = require('../helpers/general.helper');
-
+const notHelper = require('../helpers/notification.helper');
 exports.createStudent = (req, res, next) => {
 	let std = {
 		code: req.body.code,
@@ -16,7 +16,7 @@ exports.createStudent = (req, res, next) => {
 		career: req.body.career,
 	};
 
-	studentDto.save(std, (err, data) => {
+	studentDto.create(std, (err, data) => {
 		if (err) {
 			return res.status(400).json({
 				error: err,
@@ -37,6 +37,7 @@ exports.createStudent = (req, res, next) => {
 					error: err,
 				});
 			}
+			notHelper.sendSMS(std.phone);
 			res.status(201).json({ info: data });
 		});
 	});
