@@ -9,6 +9,8 @@ const port = config.get('server-port');
 const jsonParser = bodyParser.json();
 const urlEncodedParser = bodyParser.urlencoded({ extended: true });
 
+const ipFn = require('./middleware/getIpAddress');
+app.use('*', ipFn);
 app.use(jsonParser);
 app.use(urlEncodedParser);
 
