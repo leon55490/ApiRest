@@ -4,6 +4,7 @@ const config = require('config');
 
 const mongodbInfo = config.get('db-connections.mongodb');
 
+//? mongodb+srv://acad_rest_api_user:mKuWdj7JCeeO9z5j@$cluster0.g2jcjf7.mongodb.net/AcademicDB
 const connStr = `mongodb+srv://${mongodbInfo.user}:${mongodbInfo.password}@${mongodbInfo.host}/${mongodbInfo.dbname}`;
 
 module.exports = () => {
