@@ -6,7 +6,7 @@ const config = require('config');
 /** Helper */
 const helper = require('../helpers/general.helper');
 const notHelper = require('../helpers/notification.helper');
-exports.createTeacher = (req, res, next) => {
+exports.creatTeacher = (req, res, next) => {
 	let teacher = {
 		document: req.body.document,
 		name: req.body.name,
